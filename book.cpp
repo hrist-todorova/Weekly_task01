@@ -36,7 +36,7 @@ Book::~Book()
  Book& Book::operator=(Book const& b)
  {
     if(this==&b)
-        return *this;
+        return* this;
 
     if(this->author)
 		delete[]this->author;
@@ -51,23 +51,23 @@ Book::~Book()
     this->title = new char[strlen(b.title)+1];
 	strncpy(this->title, b.title, strlen(b.title)+1);
 
-	this->genre = new char[strlen(b.genre)+1];
-	strncpy(this->genre, b.genre, strlen(b.genre)+1);
+    this->genre = new char[strlen(b.genre)+1];
+    strncpy(this->genre, b.genre, strlen(b.genre)+1);
 
-	this->year = b.year;
+    this->year = b.year;
 
-    return *this;
+    return* this;
  }
 
-const char *Book::getAuthor() const {
+const char* Book::getAuthor() const {
 	return author;
 }
 
-const char *Book::getTitle() const {
+const char* Book::getTitle() const {
 	return title;
 }
 
-const char *Book::getGenre() const {
+const char* Book::getGenre() const {
 	return genre;
 }
 
