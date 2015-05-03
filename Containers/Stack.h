@@ -56,7 +56,7 @@ template <typename T>
 void Stack<T>::add(T x){
     if (full())
     {
-        cout << "Ãðåøêà: îïèò çà âêëþ÷âàíå â ïúëåí ñòåê!" << endl;
+        cout << "Грешка: опит за включване в пълен стек!" << endl;
     }
     else
     {
@@ -68,7 +68,7 @@ template <typename T>
 T Stack<T>::pop(){
     if (empty())
     {
-        cout << "Ãðåøêà: îïèò çà èçêëþ÷âàíå îò ïðàçåí ñòåê!" << endl;
+        cout << "Грешка: опит за изключване от празен стек!" << endl;
         return 0;
     }
 
@@ -79,7 +79,7 @@ template <typename T>
 Stack<T>& Stack<T>::operator+=(T x){
     if (full())
     {
-        cout << "Ãðåøêà: îïèò çà âêëþ÷âàíå â ïúëåí ñòåê!" << endl;
+        cout << "Грешка: опит за включване в пълен стек!" << endl;
     }
     else
     {
@@ -93,7 +93,7 @@ template <typename T>
 void Stack<T>::print(){
     if(empty())
     {
-        cout << "Ñòåêúò å ïðàçåí!" << endl;
+        cout << "Стекът е празен!" << endl;
     }
 
     for (int i=top; i>=0; i--)
