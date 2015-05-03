@@ -24,28 +24,28 @@ public:
 
 };
 
-int const EMPTY_STACK = -1; // празен стек
+int const EMPTY_STACK = -1; // РїСЂР°Р·РµРЅ СЃС‚РµРє
 
 template <typename T>
 Stack<T>::Stack(){
-    top = EMPTY_STACK; // конструктор по подразбиране
+    top = EMPTY_STACK; 
 }
 
 template <typename T>
 bool Stack<T>::empty() const{
-    return top == EMPTY_STACK; // ако top=-1 => стекът е празен
+    return top == EMPTY_STACK; 
 }
 
 template <typename T>
 bool Stack<T>::full() const{
-    return top == MAX1-1; //MAX-1, защото индексацията започва от 0
+    return top == MAX1-1; 
 }
 
 template <typename T>
 T Stack<T>::peek() const{
-    if (empty()) // ако стекът е празен
+    if (empty()) 
     {
-        cout << "Грешка: опит за поглеждане в празен стек!" << endl;
+        cout << "Р“СЂРµС€РєР°: РѕРїРёС‚ Р·Р° РїРѕРіР»РµР¶РґР°РЅРµ РІ РїСЂР°Р·РµРЅ СЃС‚РµРє!" << endl;
         return 0;
     }
 
@@ -56,7 +56,7 @@ template <typename T>
 void Stack<T>::add(T x){
     if (full())
     {
-        cout << "Грешка: опит за включване в пълен стек!" << endl;
+        cout << "ГѓГ°ГҐГёГЄГ : Г®ГЇГЁГІ Г§Г  ГўГЄГ«ГѕГ·ГўГ Г­ГҐ Гў ГЇГєГ«ГҐГ­ Г±ГІГҐГЄ!" << endl;
     }
     else
     {
@@ -68,7 +68,7 @@ template <typename T>
 T Stack<T>::pop(){
     if (empty())
     {
-        cout << "Грешка: опит за изключване от празен стек!" << endl;
+        cout << "ГѓГ°ГҐГёГЄГ : Г®ГЇГЁГІ Г§Г  ГЁГ§ГЄГ«ГѕГ·ГўГ Г­ГҐ Г®ГІ ГЇГ°Г Г§ГҐГ­ Г±ГІГҐГЄ!" << endl;
         return 0;
     }
 
@@ -79,7 +79,7 @@ template <typename T>
 Stack<T>& Stack<T>::operator+=(T x){
     if (full())
     {
-        cout << "Грешка: опит за включване в пълен стек!" << endl;
+        cout << "ГѓГ°ГҐГёГЄГ : Г®ГЇГЁГІ Г§Г  ГўГЄГ«ГѕГ·ГўГ Г­ГҐ Гў ГЇГєГ«ГҐГ­ Г±ГІГҐГЄ!" << endl;
     }
     else
     {
@@ -93,7 +93,7 @@ template <typename T>
 void Stack<T>::print(){
     if(empty())
     {
-        cout << "Стекът е празен!" << endl;
+        cout << "Г‘ГІГҐГЄГєГІ ГҐ ГЇГ°Г Г§ГҐГ­!" << endl;
     }
 
     for (int i=top; i>=0; i--)
